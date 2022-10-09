@@ -1,0 +1,43 @@
+#Example payloads (filled)
+
+#This is a payload as we could add it to TradingView. The values in {{""}} are filled by TradingView. The rest is to be filled by you. Comments are marked with //.
+{
+    "strategy": "{{strategy.order.action}}",
+		"order_id": "{{strategy.order.id}}",
+    "price": "{{strategy.order.price}}",
+    "ticker": "{{ticker}}", 
+    "testnet": "true", // options: : "true", "false"
+    "market" : "futures", // options : "futures", "spot"
+    "entrytype": "Market", // options : "Limit", "Market"
+    "amount": "0.01", // amount in target currency
+		"cancelafterwait" : "true", // options : "true", "false"
+		"cancelperiodsec" : "60", // seconds the limit order is active for until it's cancelled.
+}
+
+#This is how the payload would then be submitted to your bot
+{
+    "strategy": "sell",
+		"order_id" : "Short",
+    "price": "29985.23",
+    "ticker": "BTCUSDT", 
+    "testnet": "true",
+    "market" : "futures",
+    "entrytype": "Market",
+    "amount": "0.01",
+		"cancelafterwait" : "true",
+		"cancelperiodsec" : "5",
+}
+
+#This is what you can use to copy-paste
+{
+    "strategy": "{{strategy.order.action}}",
+		"order_id": "{{strategy.order.id}}",
+    "price": "{{strategy.order.price}}",
+    "ticker": "{{ticker}}", 
+    "testnet": "true",
+    "market" : "futures",
+    "entrytype": "Market",
+    "amount": "0.01",
+		"cancelafterwait" : "true",
+		"cancelperiodsec" : "60",
+}
